@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jogo de adivinhação</h1>
+    <a href="index.html">Voltar para o início</a>
+
+    <form onsubmit="verificarPalpite(); return false;">
+        Adivinhe o número de 0 a 10! 
+        <input type="text" id="palpite">
+        <input type="submit">
+        <h4 id="resultado"></h4>
+    </form>
+
+    <script>
+    function verificarPalpite() {
+        var palpiteUsuario = parseInt(document.getElementById("palpite").value);
+        var numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+
+        if (palpiteUsuario === numeroAleatorio) {
+            document.getElementById("resultado").innerText = "Você acertou!";
+        } else {
+            document.getElementById("resultado").innerText = "Tente novamente!";
+        }
+    }
+    </script>
+
+</body>
+</html>

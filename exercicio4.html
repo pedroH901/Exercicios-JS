@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de gorjeta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de gorjeta</h1>
+    <a href="index.html">Voltar para o início</a>
+
+    <form id="formulario">
+        <label for="valorConta">Valor da conta:</label>
+        <input type="number" id="valorConta" required><br><br>
+
+        <label for="nivelSatisfacao">Nível de Satisfação:</label>
+        <select id="nivelSatisfacao" required>
+            <option value="bom">Bom (10%)</option>
+            <option value="otimo">Ótimo (15%)</option>
+            <option value="excelente">Excelente (20%)</option>
+        </select><br><br>
+
+        <input type="submit" value="Calcular Gorjeta">
+    </form>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+        function calcularGorjeta(event) {
+            event.preventDefault();
+
+            var valorConta = parseFloat(document.getElementById("valorConta").value);
+            var nivelSatisfacao = document.getElementById("nivelSatisfacao").value;
+
+            var porcentagemGorjeta;
+
+            if (nivelSatisfacao === "bom") {
+                porcentagemGorjeta = 0.10;
+            } else if (nivelSatisfacao === "otimo") {
+                porcentagemGorjeta = 0.15;
+            } else if (nivelSatisfacao === "excelente") {
+                porcentagemGorjeta = 0.20;
+            }
+
+            var gorjeta = valorConta * porcentagemGorjeta;
+            var total = valorConta + gorjeta;
+
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = "Valor da Gorjeta: R$ " + gorjeta.toFixed(2) + "<br>" +
+                                  "Valor Total a Ser Pago: R$ " + total.toFixed(2);
+        }
+
+        document.getElementById("formulario").addEventListener("submit", calcularGorjeta);
+    </script>
+</body>
+</html>

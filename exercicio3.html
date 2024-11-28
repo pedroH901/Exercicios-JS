@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jogo de adivinhação</h1>
+    <a href="index.html">Voltar para o início</a>
+
+    <h1>Calculadora de Média Escolar</h1>
+    <form id="formulario">
+        <label for="prova1">Nota da Prova 1:</label>
+        <input type="number" id="prova1" required><br><br>
+
+        <label for="prova2">Nota da Prova 2:</label>
+        <input type="number" id="prova2" required><br><br>
+
+        <label for="prova3">Nota da Prova 3:</label>
+        <input type="number" id="prova3" required><br><br>
+
+        <label for="prova4">Nota da Prova 4:</label>
+        <input type="number" id="prova4" required><br><br>
+
+        <input type="submit" value="Calcular Média">
+    </form>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+        function calcularMedia(event) {
+            event.preventDefault();
+
+            var prova1 = parseFloat(document.getElementById("prova1").value);
+            var prova2 = parseFloat(document.getElementById("prova2").value);
+            var prova3 = parseFloat(document.getElementById("prova3").value);
+            var prova4 = parseFloat(document.getElementById("prova4").value);
+
+            var media = (prova1 + prova2 + prova3 + prova4) / 4;
+
+            var resultado = document.getElementById("resultado");
+
+            if (media >= 7) {
+                resultado.innerText = "Média: " + media.toFixed(2) + " - Aprovado!";
+            } else if (media >= 5) {
+                resultado.innerText = "Média: " + media.toFixed(2) + " - Recuperação";
+            } else {
+                resultado.innerText = "Média: " + media.toFixed(2) + " - Reprovado";
+            }
+        }
+
+        document.getElementById("formulario").addEventListener("submit", calcularMedia);
+    </script>
+</body>
+</html>

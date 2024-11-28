@@ -1,0 +1,28 @@
+body {
+    background-color: darkgray;
+}
+
+h1 {
+    color: black
+}
+
+.fonteTitulo {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.botaoExercicios {
+    background-color: white;
+    text-decoration: none;
+
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes a {
+    margin-bottom: 10px;
+    width: 300px;
+}
