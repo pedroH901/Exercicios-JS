@@ -1,7 +1,6 @@
 body {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     background-color: darkgray;   
 }
 
@@ -11,13 +10,16 @@ h1 {
 
 .fonteTitulo {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    z-index: 1;
+    font-size: xx-large;
 }
 .botaoExercicios {
     color: blue;
     background-color: white;
     text-decoration: none;
+    border-style: solid;
+    border-color: black;
 
+    margin-bottom: 5vh;
     z-index: 1;
     padding: 5px;
     border-radius: 5px;
@@ -25,7 +27,7 @@ h1 {
 }
 
 .botaoExercicios:hover {
-    padding: 15px;
+    padding: 10px;
 }
 
 .botoes {
@@ -45,4 +47,148 @@ h1 {
     margin-right: 2%;
     height: 300px;
 
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image:url(monza.jpg);
+    background-size: contain;
+
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.conteudoExercicio1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image:url(adivinhando.jpg);
+
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.conteudoExercicio1 h1, h4 {
+    background-color: darkgray;
+    width: 20vh;
+    border-radius: 5px;
+}
+
+.conteudoExercicio2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image:url(calendario.jpg);
+
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.conteudoExercicio2 h1, h4 {
+    background-color: darkgray;
+    width: 50vh;
+    border-radius: 5px;
+}
+
+.conteudoExercicio3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image:url(estudando.jpg);
+
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.conteudoExercicio3 h1, h4 {
+    background-color: darkgray;
+    width: 50vh;
+    border-radius: 5px;
+}
+
+.conteudoExercicio4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image:url(garçom.jpg);
+
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.conteudoExercicio4 h1, h3 {
+    background-color: darkgray;
+    width: 50vh;
+    border-radius: 5px;
+}
+
+.conteudoExercicio5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image:url(diatardenoite.jpg);
+
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.conteudoExercicio5 h1, h4 {
+    background-color: darkgray;
+    width: 50vh;
+    border-radius: 5px;
+}
+
+.conteudoExercicio6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;    
+    background-image:url(senha.png);
+
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.conteudoExercicio6 form {
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.conteudoExercicio6 h1, h4 {
+    background-color: darkgray;
+    width: 50vh;
+    border-radius: 5px;
 }

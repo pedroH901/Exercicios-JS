@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="conteudoExercicio6">
+        <h1>Jogo de senha</h1>
+        <a class="botaoExercicios" href="index.html">Voltar para o início</a>
+        <br> <br>
+
+        <form onsubmit="senha(); return false;">
+            Digite a senha correta!
+            
+            <input type="text" id="senhaDoUsuario">
+            <input type="submit">
+            <h4 id="resultado"></h4>
+            <h6>DICA: A senha correta NÃO É JavaScript123!</h6>
+        </form>
+
+    </div>
+
+    <script>
+        function senha() {
+            var senhaCorreta = "JavaScript123"
+            var senhaUsuario = document.getElementById("senhaDoUsuario").value;
+        
+
+        if(senhaUsuario === senhaCorreta) {
+            document.getElementById("resultado").innerText = "Senha correta!"
+        } else {
+            document.getElementById("resultado").innerText = "Você errou, leia a dica!"
+        }
+    }
+
+    </script>
+
+</body>
+</html>
